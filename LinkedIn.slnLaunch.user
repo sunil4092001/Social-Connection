@@ -1,0 +1,35 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "IdentityService\\IdentityService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ProductService\\ProductService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "GatewayService\\GatewayService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "UserService\\UserService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PostService\\PostService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ConnectionService\\ConnectionService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "NotificationService\\NotificationService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
