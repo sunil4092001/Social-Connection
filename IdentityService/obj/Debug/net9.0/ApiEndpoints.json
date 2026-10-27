@@ -13,7 +13,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[IdentityService.DTOs.LoginResponse, IdentityService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "IdentityService.Controllers.AuthController",
@@ -24,12 +34,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "token",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "IdentityService.DTOs.RefreshTokenRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "IdentityService.Controllers.AuthController",
@@ -50,12 +70,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "token",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "IdentityService.DTOs.RefreshTokenRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[IdentityService.DTOs.LoginResponse, IdentityService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "IdentityService.Controllers.AuthController",
@@ -71,51 +101,9 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IdentityService.Controllers.ProfileController",
-    "Method": "UpdateProfile",
-    "RelativePath": "api/profile",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "profileDto",
-        "Type": "IdentityService.DTOs.User.UserProfileDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IdentityService.Controllers.ProfileController",
-    "Method": "GetProfile",
-    "RelativePath": "api/profile/data",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IdentityService.Controllers.InternalUsersController",
-    "Method": "GetUsers",
-    "RelativePath": "internal/users/batch",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ids",
-        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[IdentityService.DTOs.User.UserSummaryDto, IdentityService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[IdentityService.DTOs.User.RegisterResponse, IdentityService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -124,26 +112,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "IdentityService.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[IdentityService.WeatherForecast, IdentityService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

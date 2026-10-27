@@ -26,6 +26,53 @@
     ]
   },
   {
+    "ContainingType": "PostService.Controllers.CommentController",
+    "Method": "UpdateComment",
+    "RelativePath": "api/comments/{commentId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "commentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "PostService.Application.Features.Comments.Request.UpdateCommentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[PostService.Application.Features.Comments.Dtos.CommentDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PostService.Controllers.CommentController",
+    "Method": "DeleteComment",
+    "RelativePath": "api/comments/{commentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "commentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PostService.Controllers.PostsController",
     "Method": "Create",
     "RelativePath": "api/posts",
@@ -67,7 +114,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[PostService.Application.Features.Posts.DTOs.PostDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[PostService.Application.Features.Posts.DTOs.FeedPost.FeedPostDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -122,11 +169,73 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "PostService.Controllers.PostsController",
-    "Method": "GetCommetsByPost",
+    "Method": "Like",
+    "RelativePath": "api/posts/{id}/like",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[PostService.Application.Features.Posts.DTOs.FeedPost.PostLikeStateDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PostService.Controllers.PostsController",
+    "Method": "Unlike",
+    "RelativePath": "api/posts/{id}/like",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[PostService.Application.Features.Posts.DTOs.FeedPost.PostLikeStateDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PostService.Controllers.PostsController",
+    "Method": "GetComments",
     "RelativePath": "api/posts/{postId}/comments",
     "HttpMethod": "GET",
     "IsController": true,
@@ -138,7 +247,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[System.Collections.Generic.IReadOnlyList\u00601[[PostService.Application.Features.Comments.Dtos.CommentDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "PostService.Controllers.PostsController",
@@ -148,6 +267,11 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "scope",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "page",
         "Type": "System.Int32",
@@ -161,7 +285,43 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[BuildingBlocks.Response.ApiResponse\u00601[[PostService.Application.Features.Posts.DTOs.FeedPost.FeedPostDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], BuildingBlocks, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[System.Collections.Generic.IReadOnlyList\u00601[[PostService.Application.Features.Posts.DTOs.FeedPost.FeedPostDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PostService.Controllers.PostsController",
+    "Method": "GetUserPosts",
+    "RelativePath": "api/posts/user/{authorUserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorUserId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[System.Collections.Generic.IReadOnlyList\u00601[[PostService.Application.Features.Posts.DTOs.FeedPost.FeedPostDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

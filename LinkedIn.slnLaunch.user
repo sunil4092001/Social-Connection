@@ -7,10 +7,6 @@
         "Action": "Start"
       },
       {
-        "Path": "ProductService\\ProductService.csproj",
-        "Action": "Start"
-      },
-      {
         "Path": "GatewayService\\GatewayService.csproj",
         "Action": "Start"
       },
@@ -28,6 +24,10 @@
       },
       {
         "Path": "NotificationService\\NotificationService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "RequirementService\\RequirementService.csproj",
         "Action": "Start"
       }
     ]

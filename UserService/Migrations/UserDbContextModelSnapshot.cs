@@ -22,6 +22,141 @@ namespace UserService.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("UserService.Domain.ProfessionalSkill", b =>
+                {
+                    b.Property<Guid>("ProfessionalId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SkillId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ExperienceYears")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("SkillLevel")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("ProfessionalId", "SkillId");
+
+                    b.HasIndex("SkillId");
+
+                    b.ToTable("ProfessionalSkills", (string)null);
+                });
+
+            modelBuilder.Entity("UserService.Domain.Skill", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("character varying(120)");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("character varying(120)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name", "Category")
+                        .IsUnique();
+
+                    b.ToTable("Skills", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a001"),
+                            Category = "Masonry",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Brick Work"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a002"),
+                            Category = "Masonry",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Concrete Work"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a003"),
+                            Category = "Masonry",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Plastering"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a004"),
+                            Category = "Masonry",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "House Construction"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a005"),
+                            Category = "Carpentry",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Furniture"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a006"),
+                            Category = "Carpentry",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Modular Kitchen"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a007"),
+                            Category = "Plumbing",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Bathroom Plumbing"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a008"),
+                            Category = "Plumbing",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Kitchen Plumbing"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a009"),
+                            Category = "Plumbing",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Water Pipeline"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a010"),
+                            Category = "Electrical",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "House Wiring"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a011"),
+                            Category = "Electrical",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Electrical Installation"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fbe1c6f-93f3-4b95-9fb1-fccf12a6a012"),
+                            Category = "Electrical",
+                            CreatedAtUtc = new DateTime(2026, 9, 12, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Lighting"
+                        });
+                });
+
             modelBuilder.Entity("UserService.Domain.UserProfile", b =>
                 {
                     b.Property<Guid>("Id")
@@ -31,16 +166,16 @@ namespace UserService.Migrations
                     b.Property<string>("About")
                         .HasColumnType("text");
 
+                    b.Property<string>("AvailabilityStatus")
+                        .HasColumnType("text");
+
                     b.Property<string>("Bio")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Company")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("CoverImageUrl")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAtUtc")
@@ -50,6 +185,9 @@ namespace UserService.Migrations
                         .IsRequired()
                         .HasMaxLength(120)
                         .HasColumnType("character varying(120)");
+
+                    b.Property<int?>("ExperienceYears")
+                        .HasColumnType("integer");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -61,19 +199,27 @@ namespace UserService.Migrations
                         .HasMaxLength(160)
                         .HasColumnType("character varying(160)");
 
+                    b.Property<bool>("IsVerified")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("character varying(200)");
 
                     b.Property<string>("Location")
-                        .HasColumnType("text");
+                        .HasMaxLength(120)
+                        .HasColumnType("character varying(120)");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("text");
 
+                    b.Property<string>("ProfessionalType")
+                        .HasColumnType("text");
+
                     b.Property<string>("ProfileImageUrl")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -82,8 +228,13 @@ namespace UserService.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Website")
+                    b.Property<string>("UserType")
                         .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("CUSTOMER");
+
+                    b.Property<string>("Website")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -92,6 +243,36 @@ namespace UserService.Migrations
                         .IsUnique();
 
                     b.ToTable("UserProfiles", (string)null);
+                });
+
+            modelBuilder.Entity("UserService.Domain.ProfessionalSkill", b =>
+                {
+                    b.HasOne("UserService.Domain.UserProfile", "Professional")
+                        .WithMany("ProfessionalSkills")
+                        .HasForeignKey("ProfessionalId")
+                        .HasPrincipalKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UserService.Domain.Skill", "Skill")
+                        .WithMany("ProfessionalSkills")
+                        .HasForeignKey("SkillId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Professional");
+
+                    b.Navigation("Skill");
+                });
+
+            modelBuilder.Entity("UserService.Domain.Skill", b =>
+                {
+                    b.Navigation("ProfessionalSkills");
+                });
+
+            modelBuilder.Entity("UserService.Domain.UserProfile", b =>
+                {
+                    b.Navigation("ProfessionalSkills");
                 });
 #pragma warning restore 612, 618
         }

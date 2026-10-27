@@ -10,7 +10,14 @@ public sealed class SearchUserProfilesQueryHandler(IUserProfileRepository reposi
 {
     public async Task<IReadOnlyList<Dtos.UpdateUserProfileCommand>> Handle(SearchUserProfilesQuery request, CancellationToken cancellationToken)
     {
-        var profiles = await repository.SearchAsync(request.Term, cancellationToken);
+        var profiles = await repository.SearchAsync(
+            request.Term,
+            request.ProfessionalType,
+            request.Location,
+            request.Skill,
+            request.MinimumExperienceYears,
+            request.AvailabilityStatus,
+            cancellationToken);
         return profiles.Select(profile => profile.ToDto()).ToList();
     }
 }

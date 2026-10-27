@@ -1,24 +1,16 @@
-﻿using IdentityService.DTOs.User;
 using IdentityService.Entities;
 
-namespace IdentityService.Repository
+namespace IdentityService.Repository;
+
+public interface IAuthRepository
 {
-    public interface IAuthRepository
-    {
-
-        Task RegisterAsync(User request);
-        Task<User?> GetByEmailAsync(string email);
-        Task<RefreshToken> GetRefreshTokenAsync(string token);
-
-        Task AddRefreshTokenAsync(RefreshToken token);
-
-        Task SaveChangesAsync();
-
-        //Task<List<UserSummaryDto>> GetUsersProfileAsync(IEnumerable<Guid> userIds, CancellationToken cancellationToken);
-
-        #region ==Profile
-        Task<User> UpdateProfileAsync(User user);
-        Task<User?> GetProfile(Guid userID);
-        #endregion
-    }
+    Task RegisterAsync(User request);
+    /// <summary>Removes a user that could not be completed (compensation when UserService rejects the profile).</summary>
+    Task DeleteUserAsync(Guid userId);
+    /// <summary>Case-insensitive lookup.</summary>
+    Task<User?> GetByEmailAsync(string email);
+    Task<RefreshToken?> GetRefreshTokenAsync(string tokenHash);
+    Task<IReadOnlyList<RefreshToken>> GetActiveRefreshTokensAsync(Guid userId, DateTime now);
+    Task AddRefreshTokenAsync(RefreshToken token);
+    Task SaveChangesAsync();
 }

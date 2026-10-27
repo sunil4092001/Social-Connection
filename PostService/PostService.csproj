@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
+    <UserSecretsId>b7c1a3e2-1d4f-4a51-9e2b-0b6a3c7d1003</UserSecretsId>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -30,7 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Common\Exceptions\" />
     <Folder Include="Application\Features\Likes\" />
     <Folder Include="Migrations\" />
   </ItemGroup>

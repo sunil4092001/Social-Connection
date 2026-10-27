@@ -1,138 +1,88 @@
-﻿using System.Security.Claims;
+using System.Security.Claims;
+using BuildingBlocks.Exceptions;
 using BuildingBlocks.Response;
 using FluentValidation;
-using IdentityService.Controllers.UserServiceCall;
-using IdentityService.Data;
 using IdentityService.DTOs;
 using IdentityService.DTOs.User;
-using IdentityService.Entities;
 using IdentityService.Services;
 using IdentityService.Services.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
-namespace IdentityService.Controllers
+namespace IdentityService.Controllers;
+
+[ApiController]
+[Route("api/auth")]
+public class AuthController(
+    IAuthService authService,
+    IUserServiceClient userServiceClient,
+    IValidator<RegisterRequest> registerValidator,
+    IValidator<LoginRequest> loginValidator,
+    ILogger<AuthController> logger) : ControllerBase
 {
-    [ApiController]
-    [Route("api/auth")]
-    public class AuthController : ControllerBase
+    /// <summary>
+    /// Creates the login (here) and the profile (UserService). If UserService fails, the login is removed again so
+    /// the user can simply retry; no half-registered accounts are left behind.
+    /// </summary>
+    [HttpPost("register")]
+    public async Task<ActionResult<ApiResponse<RegisterResponse>>> Register(RegisterRequest request, CancellationToken cancellationToken)
     {
+        await registerValidator.ValidateAndThrowAsync(request, cancellationToken);
 
-        private readonly AuthService _authService;
-        private readonly IUserServiceClient _userServiceClient;
+        var result = await authService.Register(request)
+            ?? throw new ConflictException("Email already exists.");
 
-        public AuthController(AuthService authService, JwtService jwtService, IUserServiceClient userServiceClient)
+        try
         {
-            _authService = authService;
-            _userServiceClient = userServiceClient;
+            await userServiceClient.CreateUserAsync(result.UserId, request);
+        }
+        catch (Exception exception) when (exception is not OperationCanceledException)
+        {
+            logger.LogError(exception, "Profile creation failed for new user {UserId}; rolling back the registration", result.UserId);
+            await authService.RemoveUser(result.UserId);
+            return StatusCode(StatusCodes.Status503ServiceUnavailable, ApiResponseFactory.Failure<RegisterResponse>(
+                "Registration could not be completed right now. Please try again in a moment."));
         }
 
-
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterRequest request, [FromServices] IValidator<RegisterRequest> validator)
-        {
-
-            try
-            {
-                var validationResult = await validator.ValidateAsync(request);
-
-                if (!validationResult.IsValid)
-                {
-                    var errors = validationResult.Errors
-                        .GroupBy(x => x.PropertyName)
-                        .ToDictionary(
-                            g => g.Key,
-                            g => g.Select(x => x.ErrorMessage).ToArray()
-                        );
-
-                    return BadRequest(ApiResponseFactory.Failure<RegisterResponse>(
-                        "Validation Message :",
-                        errors
-                        ));
-                }
-
-                var result = await _authService.Register(request);
-                if (result == null)
-                {
-                    return Conflict(
-                        ApiResponseFactory.Failure<RegisterResponse>(
-                            "Email already exists."));
-                }
-
-                try
-                {
-                    //Calling UserService Api 
-                    await _userServiceClient.CreateUserAsync(result.UserId, request);
-
-                }
-                catch (Exception ex)
-                {                 
-                    throw ex;
-                }
-
-                return Ok(ApiResponseFactory.Success(
-                    result,
-                    "User registered successfully."
-                    ));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginRequest request)
-        {
-            var result = await _authService.Login(request);
-
-            if (result == null)
-                //return Unauthorized("Invalid Credential");
-                return Unauthorized(ApiResponseFactory.Failure<LoginResponse>(
-                    "Invalid email or password."
-                    ));     
-            return Ok(ApiResponseFactory.Success<LoginResponse>(
-                    result,
-                    "Login successful."
-                ));
-        }
-
-        [HttpPost("refresh-token")]
-        public async Task<IActionResult> RefreshToken([FromBody] string token)
-        {
-            var result = await _authService.RefreshToken(token);
-            return Ok(result);
-        }
-
-        [HttpPost("logout")]
-        public async Task<IActionResult> Logout([FromBody] string token)
-        {
-            var result = await _authService.Logout(token);
-
-            if (!result)
-                return BadRequest("Invalid token");
-
-            return Ok("Logged out successfully");
-        }
-
-        [Authorize]
-        [HttpGet("profile")]
-        public IActionResult Profile()
-        {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var name = User.FindFirst(ClaimTypes.Name)?.Value;
-            var email = User.FindFirst(ClaimTypes.Email)?.Value;
-            //var role = User.FindFirst(ClaimTypes.Role)?.Value;
-
-            return Ok(new
-            {
-                UserId = userId,
-                Name = name,
-                Email = email,
-                
-                //Role = role
-            });
-        }
+        return Ok(ApiResponseFactory.Success(result, "User registered successfully."));
     }
+
+    [HttpPost("login")]
+    public async Task<ActionResult<ApiResponse<LoginResponse>>> Login(LoginRequest request, CancellationToken cancellationToken)
+    {
+        await loginValidator.ValidateAndThrowAsync(request, cancellationToken);
+
+        var result = await authService.Login(request);
+        if (result is null)
+            return Unauthorized(ApiResponseFactory.Failure<LoginResponse>("Invalid email or password."));
+
+        return Ok(ApiResponseFactory.Success(result, "Login successful."));
+    }
+
+    /// <summary>Exchanges a refresh token for a new access token and a new refresh token (the old one stops working).</summary>
+    [HttpPost("refresh-token")]
+    public async Task<ActionResult<ApiResponse<LoginResponse>>> RefreshToken(RefreshTokenRequest request)
+    {
+        var result = await authService.RefreshToken(request.RefreshToken);
+        if (result is null)
+            return Unauthorized(ApiResponseFactory.Failure<LoginResponse>("Your session has expired. Please log in again."));
+
+        return Ok(ApiResponseFactory.Success(result, "Token refreshed."));
+    }
+
+    /// <summary>Revokes the refresh token. Always succeeds so it can be called even when the session already ended.</summary>
+    [HttpPost("logout")]
+    public async Task<ActionResult<ApiResponse<bool>>> Logout(RefreshTokenRequest request)
+    {
+        await authService.Logout(request.RefreshToken);
+        return Ok(ApiResponseFactory.Success(true, "Logged out successfully."));
+    }
+
+    [Authorize]
+    [HttpGet("profile")]
+    public IActionResult Profile() => Ok(new
+    {
+        UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value,
+        Email = User.FindFirst(ClaimTypes.Email)?.Value
+    });
 }

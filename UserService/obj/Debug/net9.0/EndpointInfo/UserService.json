@@ -5,30 +5,11 @@
     "version": "v1"
   },
   "paths": {
-    "/api/users": {
-      "post": {
+    "/api/users/me": {
+      "get": {
         "tags": [
           "Users"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUserProfileRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUserProfileRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUserProfileRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK",
@@ -51,13 +32,30 @@
             }
           }
         }
-      }
-    },
-    "/api/users/me": {
-      "get": {
+      },
+      "post": {
         "tags": [
           "Users"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMyProfileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMyProfileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMyProfileRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK",
@@ -89,17 +87,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserProfileCommand"
+                "$ref": "#/components/schemas/UpdateUserProfileRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserProfileCommand"
+                "$ref": "#/components/schemas/UpdateUserProfileRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserProfileCommand"
+                "$ref": "#/components/schemas/UpdateUserProfileRequest"
               }
             }
           }
@@ -110,17 +108,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateUserProfileCommandApiResponse"
+                  "$ref": "#/components/schemas/UpdateUserProfileCommand"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateUserProfileCommandApiResponse"
+                  "$ref": "#/components/schemas/UpdateUserProfileCommand"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateUserProfileCommandApiResponse"
+                  "$ref": "#/components/schemas/UpdateUserProfileCommand"
                 }
               }
             }
@@ -164,6 +162,218 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/users/search": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "term",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "professionalType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ProfessionalType"
+            }
+          },
+          {
+            "name": "location",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skill",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "minimumExperienceYears",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "availabilityStatus",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/AvailabilityStatus"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UpdateUserProfileCommand"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UpdateUserProfileCommand"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UpdateUserProfileCommand"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/skills": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SkillDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SkillDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SkillDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/{userId}/skills": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddProfessionalSkillRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddProfessionalSkillRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddProfessionalSkillRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSkillDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSkillDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSkillDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/{userId}/skills/{skillId}": {
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "skillId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -212,10 +422,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/UserSummaryDto"
-                    }
+                    "$ref": "#/components/schemas/UserSummaryDto"
                   }
                 }
               },
@@ -223,10 +430,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/UserSummaryDto"
-                    }
+                    "$ref": "#/components/schemas/UserSummaryDto"
                   }
                 }
               },
@@ -234,10 +438,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/UserSummaryDto"
-                    }
+                    "$ref": "#/components/schemas/UserSummaryDto"
                   }
                 }
               }
@@ -249,13 +450,34 @@
   },
   "components": {
     "schemas": {
-      "CreateUserProfileRequest": {
+      "AddProfessionalSkillRequest": {
         "type": "object",
         "properties": {
-          "userId": {
+          "skillId": {
             "type": "string",
             "format": "uuid"
           },
+          "experienceYears": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skillLevel": {
+            "$ref": "#/components/schemas/SkillLevel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AvailabilityStatus": {
+        "enum": [
+          "AVAILABLE",
+          "BUSY",
+          "NOT_AVAILABLE"
+        ],
+        "type": "string"
+      },
+      "CreateMyProfileRequest": {
+        "type": "object",
+        "properties": {
           "firstName": {
             "type": "string",
             "nullable": true
@@ -279,9 +501,96 @@
           "location": {
             "type": "string",
             "nullable": true
+          },
+          "userType": {
+            "$ref": "#/components/schemas/UserType"
+          },
+          "professionalType": {
+            "$ref": "#/components/schemas/ProfessionalType"
+          },
+          "experienceYears": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "availabilityStatus": {
+            "$ref": "#/components/schemas/AvailabilityStatus"
           }
         },
         "additionalProperties": false
+      },
+      "ProfessionalType": {
+        "enum": [
+          "MASON",
+          "CARPENTER",
+          "PLUMBER",
+          "ELECTRICIAN",
+          "PAINTER",
+          "TILE_WORKER",
+          "WELDER",
+          "ROOFER",
+          "CIVIL_ENGINEER",
+          "ARCHITECT",
+          "INTERIOR_DESIGNER",
+          "CONTRACTOR",
+          "CONSTRUCTION_SUPERVISOR",
+          "PROJECT_MANAGER",
+          "HVAC_TECHNICIAN",
+          "OTHER"
+        ],
+        "type": "string"
+      },
+      "ProfileSkillDto": {
+        "type": "object",
+        "properties": {
+          "skillId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "experienceYears": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skillLevel": {
+            "$ref": "#/components/schemas/SkillLevel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SkillDto": {
+        "type": "object",
+        "properties": {
+          "skillId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SkillLevel": {
+        "enum": [
+          "BEGINNER",
+          "INTERMEDIATE",
+          "ADVANCED",
+          "EXPERT"
+        ],
+        "type": "string"
       },
       "UpdateUserProfileCommand": {
         "type": "object",
@@ -310,6 +619,10 @@
             "type": "string",
             "nullable": true
           },
+          "bio": {
+            "type": "string",
+            "nullable": true
+          },
           "location": {
             "type": "string",
             "nullable": true
@@ -317,41 +630,79 @@
           "createdAtUtc": {
             "type": "string",
             "format": "date-time"
+          },
+          "userType": {
+            "$ref": "#/components/schemas/UserType"
+          },
+          "professionalType": {
+            "$ref": "#/components/schemas/ProfessionalType"
+          },
+          "experienceYears": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "availabilityStatus": {
+            "$ref": "#/components/schemas/AvailabilityStatus"
+          },
+          "isVerified": {
+            "type": "boolean"
+          },
+          "profileImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProfileSkillDto"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "UpdateUserProfileCommandApiResponse": {
+      "UpdateUserProfileRequest": {
         "type": "object",
         "properties": {
-          "success": {
-            "type": "boolean"
-          },
-          "message": {
+          "firstName": {
             "type": "string",
             "nullable": true
           },
-          "data": {
-            "$ref": "#/components/schemas/UpdateUserProfileCommand"
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "timestamp": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "correlationId": {
+          "lastName": {
             "type": "string",
             "nullable": true
           },
-          "statusCode": {
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "headline": {
+            "type": "string",
+            "nullable": true
+          },
+          "about": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "professionalType": {
+            "$ref": "#/components/schemas/ProfessionalType"
+          },
+          "experienceYears": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
+          },
+          "availabilityStatus": {
+            "$ref": "#/components/schemas/AvailabilityStatus"
+          },
+          "profileImageUrl": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -373,6 +724,13 @@
           }
         },
         "additionalProperties": false
+      },
+      "UserType": {
+        "enum": [
+          "CUSTOMER",
+          "PROFESSIONAL"
+        ],
+        "type": "string"
       }
     }
   }

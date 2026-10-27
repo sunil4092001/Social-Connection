@@ -26,7 +26,8 @@ namespace BuildingBlocks.Response
             {
                 Success = false,
                 Message = message,
-                Errors = (IEnumerable<string>)errors,
+                // Flatten { "Field": ["msg1", "msg2"] } into ["Field: msg1", "Field: msg2"].
+                Errors = errors?.SelectMany(entry => entry.Value.Select(error => $"{entry.Key}: {error}")).ToList(),
                 CorrelationId = correlationId
             };
         }

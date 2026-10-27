@@ -21,8 +21,10 @@
   <ItemGroup>
     <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.csproj" />
     <ProjectReference Include="..\ConnectionService\ConnectionService.csproj" />
+    <ProjectReference Include="..\IdentityService\IdentityService.csproj" />
     <ProjectReference Include="..\NotificationService\NotificationService.csproj" />
     <ProjectReference Include="..\PostService\PostService.csproj" />
+    <ProjectReference Include="..\RequirementService\RequirementService.csproj" />
     <ProjectReference Include="..\UserService\UserService.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,4 @@
-using System;
+using BuildingBlocks.Messaging.Outbox;
 using Microsoft.EntityFrameworkCore;
 using PostService.Domain.Entity;
 using PostService.Infrastructure.Persistence.Configurations;
@@ -19,6 +19,8 @@ public sealed class PostDbContext(DbContextOptions<PostDbContext> options) : DbC
         modelBuilder.ApplyConfiguration(new CommentConfiguration());
         modelBuilder.ApplyConfiguration(new PostLikeConfiguration());
         modelBuilder.ApplyConfiguration(new CommentLikeConfiguration());
+        // Like and comment events are stored here in the same transaction and relayed to Kafka.
+        modelBuilder.ConfigureOutbox();
         //need to map post configuration dirctly
         //modelBuilder.Entity<Post>(entity =>
         //{

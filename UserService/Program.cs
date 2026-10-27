@@ -1,9 +1,13 @@
+using BuildingBlocks.Health;
+using BuildingBlocks.Observability;
+using BuildingBlocks.Persistence;
 using BuildingBlocks.ExceptionHandling;
 using BuildingBlocks.Logging;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 using UserService.Application.Behaviors;
 using UserService.Infrastructure.Persistence;
 using UserService.Infrastructure.Repositories;
@@ -12,7 +16,8 @@ using BuildingBlocks.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 //cQRS
 builder.Services.AddCors(options =>
 {
@@ -41,6 +46,8 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBeh
 
 
 builder.AddSerilogLogging("UserService");
+builder.AddObservability("UserService");
+builder.Services.AddHealthChecks().AddDbContextCheck<UserDbContext>("database", tags: [HealthEndpointExtensions.ReadyTag]);
 
 var app = builder.Build();
 
@@ -61,6 +68,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHealthEndpoints();
+await app.MigrateDatabaseIfConfiguredAsync<UserDbContext>();
 app.Run();
 
 public partial class Program;

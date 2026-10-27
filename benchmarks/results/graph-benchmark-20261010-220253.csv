@@ -1,0 +1,31 @@
+users,connections,database,query,median_ms,p95_ms,mean_ms
+1000,9945,Neo4j,"load (s)",4.389,4.389,4.389
+1000,9945,PostgreSQL,"load (s)",0.855,0.855,0.855
+1000,9945,Neo4j,"suggestions (2 hops, top 10)",12.335,20.625,13.266
+1000,9945,PostgreSQL,"suggestions (2 hops, top 10)",8.696,13.255,9.250
+1000,9945,Neo4j,"mutual connections",5.965,7.369,6.001
+1000,9945,PostgreSQL,"mutual connections",1.284,1.736,1.344
+1000,9945,Neo4j,"degrees of 50 users",13.198,21.750,13.635
+1000,9945,PostgreSQL,"degrees of 50 users",7.429,15.054,15.061
+1000,9945,Neo4j,"reach within 3 hops",7.717,12.457,8.414
+1000,9945,PostgreSQL,"reach within 3 hops",40.063,76.472,43.702
+10000,99945,Neo4j,"load (s)",14.005,14.005,14.005
+10000,99945,PostgreSQL,"load (s)",2.258,2.258,2.258
+10000,99945,Neo4j,"suggestions (2 hops, top 10)",7.888,16.550,11.001
+10000,99945,PostgreSQL,"suggestions (2 hops, top 10)",2.886,9.875,4.763
+10000,99945,Neo4j,"mutual connections",4.674,6.301,5.051
+10000,99945,PostgreSQL,"mutual connections",0.773,0.875,0.783
+10000,99945,Neo4j,"degrees of 50 users",7.406,12.775,7.986
+10000,99945,PostgreSQL,"degrees of 50 users",3.424,10.845,23.362
+10000,99945,Neo4j,"reach within 3 hops",9.697,16.799,10.649
+10000,99945,PostgreSQL,"reach within 3 hops",35.922,134.114,44.950
+50000,499945,Neo4j,"load (s)",65.165,65.165,65.165
+50000,499945,PostgreSQL,"load (s)",7.373,7.373,7.373
+50000,499945,Neo4j,"suggestions (2 hops, top 10)",6.922,13.278,7.759
+50000,499945,PostgreSQL,"suggestions (2 hops, top 10)",3.785,6.426,4.040
+50000,499945,Neo4j,"mutual connections",4.220,5.346,4.334
+50000,499945,PostgreSQL,"mutual connections",0.962,1.194,0.945
+50000,499945,Neo4j,"degrees of 50 users",8.441,13.009,8.900
+50000,499945,PostgreSQL,"degrees of 50 users",3.255,8.023,3.829
+50000,499945,Neo4j,"reach within 3 hops",21.692,51.930,26.260
+50000,499945,PostgreSQL,"reach within 3 hops",69.205,195.205,88.285

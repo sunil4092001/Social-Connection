@@ -1,58 +1,38 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using IdentityService.Entities;
 using Microsoft.IdentityModel.Tokens;
 
-namespace IdentityService.Services
+namespace IdentityService.Services;
+
+public class JwtService(IConfiguration configuration)
 {
-    public class JwtService
+    /// <summary>Short-lived; the Angular app renews it with the refresh token when it expires.</summary>
+    private int AccessTokenMinutes => configuration.GetValue("Jwt:AccessTokenMinutes", 15);
+
+    public string GenerateToken(User user)
     {
-        private readonly IConfiguration _configuration;
-
-        public JwtService(IConfiguration configuration)
+        var claims = new[]
         {
-            _configuration = configuration;
-        }
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.Email)
+        };
 
-        public string GenerateToken(User user)
-        {
-            var claims = new[]
-            {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                //new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
-                new Claim(ClaimTypes.Email,user.Email)
-            };
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!));
+        var token = new JwtSecurityToken(
+            issuer: configuration["Jwt:Issuer"],
+            audience: configuration["Jwt:Audience"],
+            claims: claims,
+            expires: DateTime.UtcNow.AddMinutes(AccessTokenMinutes),
+            signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
 
-            var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-
-            var creds =
-                new SigningCredentials(
-                    key,
-                    SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
-                signingCredentials: creds);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-
-        public string GenerateRefreshToken()
-        {
-            var randomBytes = new byte[64];
-
-            using var rng = RandomNumberGenerator.Create();
-
-            rng.GetBytes(randomBytes);
-
-            return Convert.ToBase64String(randomBytes);
-        }
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
+
+    /// <summary>64 random bytes; only its hash is stored (see AuthService).</summary>
+    public string GenerateRefreshToken() => Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
 }

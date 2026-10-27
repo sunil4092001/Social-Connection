@@ -2,14 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
+    <UserSecretsId>b7c1a3e2-1d4f-4a51-9e2b-0b6a3c7d1006</UserSecretsId>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Confluent.Kafka" Version="2.10.0" />
     <PackageReference Include="FluentValidation" Version="12.1.1" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="Confluent.Kafka" Version="2.10.0" />
     <PackageReference Include="MediatR" Version="12.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.16" />

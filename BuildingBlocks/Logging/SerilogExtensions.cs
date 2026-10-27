@@ -1,35 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Serilog;
 
+namespace BuildingBlocks.Logging;
 
-
-namespace BuildingBlocks.Logging
+public static class SerilogExtensions
 {
-    public static class SerilogExtensions
+    /// <summary>Structured logs to the console, and to Seq when Seq:ServerUrl is configured.</summary>
+    public static WebApplicationBuilder AddSerilogLogging(this WebApplicationBuilder builder, string serviceName)
     {
-        public static WebApplicationBuilder AddSerilogLogging( this WebApplicationBuilder builder, string serviceName)
+        var seqUrl = builder.Configuration["Seq:ServerUrl"];
+
+        builder.Services.AddSerilog((services, loggerConfiguration) =>
         {
-            
+            loggerConfiguration
+                .ReadFrom.Configuration(builder.Configuration)
+                .Enrich.FromLogContext()
+                .Enrich.WithProperty("ServiceName", serviceName)
+                .Enrich.WithMachineName()
+                .Enrich.WithEnvironmentName()
+                .WriteTo.Console();
 
-            builder.Services.AddSerilog((services, loggerConfiguration) =>
+            if (!string.IsNullOrWhiteSpace(seqUrl))
             {
-                loggerConfiguration
-                    .ReadFrom.Configuration(builder.Configuration)
-                    .Enrich.FromLogContext()
-                    .Enrich.WithProperty("ServiceName", serviceName)
-                    .Enrich.WithMachineName()
-                    .Enrich.WithEnvironmentName()
-                    .WriteTo.Console()
-                    .WriteTo.Seq(
-                        builder.Configuration["Seq:ServerUrl"]!);
-            });
+                loggerConfiguration.WriteTo.Seq(seqUrl);
+            }
+        });
 
-            return builder;
-        }
+        return builder;
     }
 }

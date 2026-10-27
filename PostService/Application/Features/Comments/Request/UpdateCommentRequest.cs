@@ -2,7 +2,7 @@
 {
     public sealed record UpdateCommentRequest
     (
-        string content
+        string Content
     );
     
 }

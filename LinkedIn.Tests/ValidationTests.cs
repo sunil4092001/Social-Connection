@@ -1,4 +1,5 @@
 using ConnectionService.Application;
+using ConnectionService.Application.Commands;
 using NotificationService.Application;
 using PostService.Application;
 using PostService.Application.Features.Posts.Commands.CreatePost;
@@ -44,7 +45,7 @@ public sealed class ValidationTests
     {
         var validator = new CreateNotificationValidator();
 
-        var result = validator.Validate(new CreateNotificationCommand(Guid.Empty, "", ""));
+        var result = validator.Validate(new CreateNotificationCommand(Guid.Empty, "", "", "", null, null));
 
         Assert.False(result.IsValid);
     }

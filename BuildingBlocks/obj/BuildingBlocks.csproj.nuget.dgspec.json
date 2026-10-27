@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {}
+    "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {}
   },
   "projects": {
-    "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+    "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
         "projectName": "BuildingBlocks",
-        "projectPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\obj\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,9 +50,41 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.19.1, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.19.1, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.19.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.19.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

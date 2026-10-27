@@ -1,3 +1,5 @@
+using BuildingBlocks.Health;
+using BuildingBlocks.Observability;
 using BuildingBlocks.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +23,8 @@ builder.Services
         builder.Configuration.GetSection("ReverseProxy"));
 
 builder.AddSerilogLogging("ApiGateway");
+builder.AddObservability("ApiGateway");
+builder.Services.AddHealthChecks();
 var app = builder.Build();
 
 app.UseMiddleware<CorrelationIdMiddleware>();
@@ -29,4 +33,5 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.MapReverseProxy();
+app.MapHealthEndpoints();
 app.Run();

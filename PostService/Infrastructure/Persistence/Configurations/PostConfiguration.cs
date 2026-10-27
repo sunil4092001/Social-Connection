@@ -25,6 +25,10 @@ namespace PostService.Infrastructure.Persistence.Configurations
             builder.Property(x => x.Visibility)
                 .IsRequired();
 
+            // Feed (newest first, deleted posts excluded) and profile (one author's posts).
+            builder.HasIndex(x => new { x.IsDeleted, x.CreatedAt });
+            builder.HasIndex(x => new { x.AuthorUserId, x.CreatedAt });
+
             /* we can configuration relation from anyone place
              * 
              * // One Post -> Many Comments

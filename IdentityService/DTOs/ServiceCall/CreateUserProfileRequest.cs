@@ -24,5 +24,10 @@ namespace IdentityService.DTOs.ServiceCall
         public string? About { get; set; }
 
         public string? Location { get; set; }
+
+        public string UserType { get; set; } = "CUSTOMER";
+        public string? ProfessionalType { get; set; }
+        public int? ExperienceYears { get; set; }
+        public string? AvailabilityStatus { get; set; }
     }
 }

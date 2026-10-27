@@ -3537,11 +3537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\OrderService\\OrderService.csproj",
+      "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\OrderService\\OrderService.csproj",
       "projectName": "OrderService",
-      "projectPath": "D:\\Microservice\\Test\\LinkedIn\\OrderService\\OrderService.csproj",
+      "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\OrderService\\OrderService.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Microservice\\Test\\LinkedIn\\OrderService\\obj\\",
+      "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\OrderService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

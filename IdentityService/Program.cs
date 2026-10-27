@@ -1,3 +1,6 @@
+using BuildingBlocks.Health;
+using BuildingBlocks.Observability;
+using BuildingBlocks.Persistence;
 using System.Text;
 using BuildingBlocks.Authentication;
 using BuildingBlocks.ExceptionHandling;
@@ -30,13 +33,9 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
-builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<JwtService>();
-builder.Services.AddScoped<UserRepository>();
-
 builder.Services.AddScoped<IAuthRepository, UserRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IProfileService, ProfileService>();
 
 
 // configuration
@@ -51,7 +50,9 @@ builder.Services.AddDbContext<IdentityDbContext>(options =>
 
 builder.Services.AddHttpClient<IUserServiceClient, UserServiceClient>(client =>
 {
-    client.BaseAddress = new Uri(builder.Configuration["Services:IdentityToUserService"]);
+    client.BaseAddress = new Uri(builder.Configuration["Services:IdentityToUserService"]!);
+    // Shared secret between IdentityService and UserService for the registration handoff.
+    client.DefaultRequestHeaders.Add("X-Internal-Service-Key", builder.Configuration["InternalService:UserServiceKey"]);
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -117,6 +118,8 @@ builder.Services.AddJwtAuthentication(builder.Configuration);
 //    });
 
 builder.AddSerilogLogging("IdentityService");
+builder.AddObservability("IdentityService");
+builder.Services.AddHealthChecks().AddDbContextCheck<IdentityDbContext>("database", tags: [HealthEndpointExtensions.ReadyTag]);
 
 var app = builder.Build();
 
@@ -145,7 +148,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHealthEndpoints();
 
+await app.MigrateDatabaseIfConfiguredAsync<IdentityDbContext>();
 app.Run();
 
 

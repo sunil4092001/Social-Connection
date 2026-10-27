@@ -10,7 +10,7 @@ public sealed class GetUserProfileByIdQueryHandler(IUserProfileRepository reposi
 {
     public async Task<Dtos.UpdateUserProfileCommand?> Handle(GetUserProfileByIdQuery request, CancellationToken cancellationToken)
     {
-        var profile = await repository.GetByIdAsync(request.Id, cancellationToken);
+        var profile = await repository.GetByUserIdAsync(request.Id, cancellationToken);
         return profile?.ToDto();
     }
 }

@@ -1,0 +1,21 @@
+namespace UserService.Domain;
+
+public enum ProfessionalType
+{
+    MASON,
+    CARPENTER,
+    PLUMBER,
+    ELECTRICIAN,
+    PAINTER,
+    TILE_WORKER,
+    WELDER,
+    ROOFER,
+    CIVIL_ENGINEER,
+    ARCHITECT,
+    INTERIOR_DESIGNER,
+    CONTRACTOR,
+    CONSTRUCTION_SUPERVISOR,
+    PROJECT_MANAGER,
+    HVAC_TECHNICIAN,
+    OTHER
+}

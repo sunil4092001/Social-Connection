@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microservice\\Test\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj": {}
+    "D:\\Microservice\\Construction\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+    "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
         "projectName": "BuildingBlocks",
-        "projectPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\obj\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,9 +50,41 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.19.1, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.19.1, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.19.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.19.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -87,14 +119,14 @@
         }
       }
     },
-    "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\ConnectionService.csproj": {
+    "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\ConnectionService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\ConnectionService.csproj",
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\ConnectionService.csproj",
         "projectName": "ConnectionService",
-        "projectPath": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\ConnectionService.csproj",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\ConnectionService.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\obj\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -115,8 +147,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
               }
             }
           }
@@ -189,14 +221,14 @@
         }
       }
     },
-    "D:\\Microservice\\Test\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj": {
+    "D:\\Microservice\\Construction\\LinkedIn\\IdentityService\\IdentityService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj",
-        "projectName": "LinkedIn.Tests",
-        "projectPath": "D:\\Microservice\\Test\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj",
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\IdentityService\\IdentityService.csproj",
+        "projectName": "IdentityService",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\IdentityService\\IdentityService.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Microservice\\Test\\LinkedIn\\LinkedIn.Tests\\obj\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\IdentityService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -217,20 +249,146 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Microservice\\Construction\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj",
+        "projectName": "LinkedIn.Tests",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\LinkedIn.Tests\\LinkedIn.Tests.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\LinkedIn.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
               },
-              "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\ConnectionService.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\ConnectionService.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\ConnectionService.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\ConnectionService.csproj"
               },
-              "D:\\Microservice\\Test\\LinkedIn\\NotificationService\\NotificationService.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\NotificationService\\NotificationService.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\IdentityService\\IdentityService.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\IdentityService\\IdentityService.csproj"
               },
-              "D:\\Microservice\\Test\\LinkedIn\\PostService\\PostService.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\PostService\\PostService.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\NotificationService.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\NotificationService.csproj"
               },
-              "D:\\Microservice\\Test\\LinkedIn\\UserService\\UserService.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\UserService\\UserService.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\PostService\\PostService.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\PostService\\PostService.csproj"
+              },
+              "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\RequirementService.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\RequirementService.csproj"
+              },
+              "D:\\Microservice\\Construction\\LinkedIn\\UserService\\UserService.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\UserService.csproj"
               }
             }
           }
@@ -288,14 +446,14 @@
         }
       }
     },
-    "D:\\Microservice\\Test\\LinkedIn\\NotificationService\\NotificationService.csproj": {
+    "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\NotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\NotificationService\\NotificationService.csproj",
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\NotificationService.csproj",
         "projectName": "NotificationService",
-        "projectPath": "D:\\Microservice\\Test\\LinkedIn\\NotificationService\\NotificationService.csproj",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\NotificationService.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Microservice\\Test\\LinkedIn\\NotificationService\\obj\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -316,8 +474,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
               }
             }
           }
@@ -404,14 +562,14 @@
         }
       }
     },
-    "D:\\Microservice\\Test\\LinkedIn\\PostService\\PostService.csproj": {
+    "D:\\Microservice\\Construction\\LinkedIn\\PostService\\PostService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\PostService\\PostService.csproj",
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\PostService\\PostService.csproj",
         "projectName": "PostService",
-        "projectPath": "D:\\Microservice\\Test\\LinkedIn\\PostService\\PostService.csproj",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\PostService\\PostService.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Microservice\\Test\\LinkedIn\\PostService\\obj\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\PostService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -432,8 +590,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
               }
             }
           }
@@ -522,14 +680,14 @@
         }
       }
     },
-    "D:\\Microservice\\Test\\LinkedIn\\UserService\\UserService.csproj": {
+    "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\RequirementService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microservice\\Test\\LinkedIn\\UserService\\UserService.csproj",
-        "projectName": "UserService",
-        "projectPath": "D:\\Microservice\\Test\\LinkedIn\\UserService\\UserService.csproj",
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\RequirementService.csproj",
+        "projectName": "RequirementService",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\RequirementService.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Microservice\\Test\\LinkedIn\\UserService\\obj\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -550,8 +708,115 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
-                "projectPath": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
+              "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.16, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Microservice\\Construction\\LinkedIn\\UserService\\UserService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\UserService.csproj",
+        "projectName": "UserService",
+        "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\UserService.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\BuildingBlocks.csproj"
               }
             }
           }

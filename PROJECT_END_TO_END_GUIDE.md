@@ -1,3 +1,5 @@
+> **Superseded.** This guide describes an earlier state of the code and is kept for history. The current architecture, workflows and operations are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/EVALUATION.md](docs/EVALUATION.md) and [RUNNING.md](RUNNING.md).
+
 # LinkedIn Microservices Project - End-to-End Guide
 
 ## 1. Project Overview

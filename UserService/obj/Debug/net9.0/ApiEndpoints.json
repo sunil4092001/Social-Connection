@@ -1,21 +1,15 @@
 [
   {
     "ContainingType": "UserService.Controllers.UsersController",
-    "Method": "Create",
-    "RelativePath": "api/users",
-    "HttpMethod": "POST",
+    "Method": "GetSkills",
+    "RelativePath": "api/skills",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "UserService.Application.Dtos.CreateUserProfileRequest",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "UserService.Application.Dtos.UpdateUserProfileCommand",
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[UserService.Application.Dtos.SkillDto, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -53,6 +47,58 @@
   },
   {
     "ContainingType": "UserService.Controllers.UsersController",
+    "Method": "AddSkill",
+    "RelativePath": "api/users/{userId}/skills",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "UserService.Application.Dtos.AddProfessionalSkillRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "UserService.Application.Dtos.ProfileSkillDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "UserService.Controllers.UsersController",
+    "Method": "RemoveSkill",
+    "RelativePath": "api/users/{userId}/skills/{skillId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "skillId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserService.Controllers.UsersController",
     "Method": "GetUsers",
     "RelativePath": "api/users/batch",
     "HttpMethod": "POST",
@@ -67,7 +113,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[System.Collections.Generic.List\u00601[[UserService.Application.Dtos.ServiceCall.UserSummaryDto, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[UserService.Application.Dtos.ServiceCall.UserSummaryDto, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -99,6 +145,32 @@
   },
   {
     "ContainingType": "UserService.Controllers.UsersController",
+    "Method": "CreateMyProfile",
+    "RelativePath": "api/users/me",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "UserService.Application.Dtos.CreateMyProfileRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "UserService.Application.Dtos.UpdateUserProfileCommand",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "UserService.Controllers.UsersController",
     "Method": "UpdateProfile",
     "RelativePath": "api/users/me",
     "HttpMethod": "PUT",
@@ -107,13 +179,64 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "UserService.Application.Dtos.UpdateUserProfileCommand",
+        "Type": "UserService.Application.Dtos.UpdateUserProfileRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "BuildingBlocks.Response.ApiResponse\u00601[[UserService.Application.Dtos.UpdateUserProfileCommand, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "UserService.Application.Dtos.UpdateUserProfileCommand",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "UserService.Controllers.UsersController",
+    "Method": "Search",
+    "RelativePath": "api/users/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "term",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "professionalType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "location",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "skill",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "minimumExperienceYears",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "availabilityStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[UserService.Application.Dtos.UpdateUserProfileCommand, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

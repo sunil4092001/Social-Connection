@@ -31,6 +31,9 @@ namespace NotificationService.Migrations
                     b.Property<DateTime>("CreatedAtUtc")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid?>("EventId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("IsRead")
                         .HasColumnType("bit");
 
@@ -42,6 +45,18 @@ namespace NotificationService.Migrations
                     b.Property<Guid>("RecipientUserId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("ReferenceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ReferenceType")
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(160)
+                        .HasColumnType("nvarchar(160)");
+
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasMaxLength(80)
@@ -49,7 +64,13 @@ namespace NotificationService.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RecipientUserId");
+                    b.HasIndex("EventId", "RecipientUserId")
+                        .IsUnique()
+                        .HasFilter("[EventId] IS NOT NULL");
+
+                    b.HasIndex("RecipientUserId", "CreatedAtUtc");
+
+                    b.HasIndex("RecipientUserId", "IsRead");
 
                     b.ToTable("Notifications");
                 });

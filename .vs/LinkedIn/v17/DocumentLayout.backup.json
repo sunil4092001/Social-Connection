@@ -1,102 +1,166 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Microservice\\Test\\LinkedIn\\",
+  "WorkspaceRootPath": "D:\\Microservice\\Construction\\LinkedIn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|d:\\microservice\\test\\linkedin\\userservice\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|solutionrelative:userservice\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\application\\outboxenvelope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\outboxenvelope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\controllers\\connectionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\controllers\\connectionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\infrastructure\\outbox\\neo4joutboxpublisherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\infrastructure\\outbox\\neo4joutboxpublisherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\queries\\sentconnection\\getsentconnectionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\queries\\sentconnection\\getsentconnectionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\infrastructure\\persistence\\neo4jschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\infrastructure\\persistence\\neo4jschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|d:\\microservice\\test\\linkedin\\buildingblocks\\common\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|solutionrelative:buildingblocks\\common\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\domain\\connectionrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\domain\\connectionrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A1897-A864-4618-9DB7-DF2FDB608226}|PostService\\PostService.csproj|d:\\microservice\\test\\linkedin\\postservice\\application\\features\\comments\\commands\\createcommand\\createcommentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A1897-A864-4618-9DB7-DF2FDB608226}|PostService\\PostService.csproj|solutionrelative:postservice\\application\\features\\comments\\commands\\createcommand\\createcommentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\infrastructure\\persistence\\neo4jconnectionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\infrastructure\\persistence\\neo4jconnectionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\infrastructure\\persistence\\neo4jconnectionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\queries\\getconnections\\getconnectionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\queries\\getconnections\\getconnectionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A1897-A864-4618-9DB7-DF2FDB608226}|PostService\\PostService.csproj|d:\\microservice\\test\\linkedin\\postservice\\application\\features\\comments\\queries\\getpostcommentqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A1897-A864-4618-9DB7-DF2FDB608226}|PostService\\PostService.csproj|solutionrelative:postservice\\application\\features\\comments\\queries\\getpostcommentqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\queries\\sentconnection\\getsentconnectionsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\queries\\sentconnection\\getsentconnectionsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\dtos\\sentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\dtos\\sentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\dtos\\connectiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\dtos\\connectiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\commands\\requestconnection\\requestconnectioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\commands\\requestconnection\\requestconnectioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\connectioncontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\connectioncontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\dtos\\connectionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\dtos\\connectionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38662449-E306-4FF9-8701-FC384E909C94}|GatewayService\\GatewayService.csproj|d:\\microservice\\test\\linkedin\\gatewayservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{38662449-E306-4FF9-8701-FC384E909C94}|GatewayService\\GatewayService.csproj|solutionrelative:gatewayservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\commands\\acceptconnection\\acceptconnectioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\commands\\acceptconnection\\acceptconnectioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\infrastructure\\persistence\\neo4joptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\infrastructure\\persistence\\neo4joptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\infrastructure\\persistence\\neo4joptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\application\\notificationeventmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\application\\notificationeventmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\queries\\getconnections\\getconnectionsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\queries\\getconnections\\getconnectionsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|d:\\microservice\\construction\\linkedin\\buildingblocks\\events\\connectionevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|solutionrelative:buildingblocks\\events\\connectionevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\commands\\requestconnection\\requestconnectionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\commands\\requestconnection\\requestconnectionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\construction\\linkedin\\connectionservice\\application\\commands\\connectioncommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\commands\\connectioncommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\commands\\acceptconnection\\acceptconnectionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\commands\\acceptconnection\\acceptconnectionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|d:\\microservice\\construction\\linkedin\\buildingblocks\\events\\eventtopics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|solutionrelative:buildingblocks\\events\\eventtopics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\application\\commands\\acceptconnection\\acceptconnectioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\application\\commands\\acceptconnection\\acceptconnectioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|d:\\microservice\\construction\\linkedin\\buildingblocks\\common\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|solutionrelative:buildingblocks\\common\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|d:\\microservice\\test\\linkedin\\connectionservice\\connectionservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{3443FCFE-B2CF-4FD4-BCC8-3DD9847FAECF}|ConnectionService\\ConnectionService.csproj|solutionrelative:connectionservice\\connectionservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|d:\\microservice\\construction\\linkedin\\buildingblocks\\authentication\\jwtextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|solutionrelative:buildingblocks\\authentication\\jwtextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\infrastructure\\efnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\infrastructure\\efnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\infrastructure\\efrequirementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\infrastructure\\efrequirementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\domain\\requirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\domain\\requirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\controllers\\requirementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\controllers\\requirementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\infrastructure\\connectionnetworkclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\infrastructure\\connectionnetworkclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D02D1CC5-426A-46F6-AEE8-93140B1B38C5}|benchmarks\\GraphBenchmark\\GraphBenchmark.csproj|d:\\microservice\\construction\\linkedin\\benchmarks\\graphbenchmark\\socialgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D02D1CC5-426A-46F6-AEE8-93140B1B38C5}|benchmarks\\GraphBenchmark\\GraphBenchmark.csproj|solutionrelative:benchmarks\\graphbenchmark\\socialgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D02D1CC5-426A-46F6-AEE8-93140B1B38C5}|benchmarks\\GraphBenchmark\\GraphBenchmark.csproj|d:\\microservice\\construction\\linkedin\\benchmarks\\graphbenchmark\\neo4jstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D02D1CC5-426A-46F6-AEE8-93140B1B38C5}|benchmarks\\GraphBenchmark\\GraphBenchmark.csproj|solutionrelative:benchmarks\\graphbenchmark\\neo4jstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D02D1CC5-426A-46F6-AEE8-93140B1B38C5}|benchmarks\\GraphBenchmark\\GraphBenchmark.csproj|d:\\microservice\\construction\\linkedin\\benchmarks\\graphbenchmark\\igraphstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D02D1CC5-426A-46F6-AEE8-93140B1B38C5}|benchmarks\\GraphBenchmark\\GraphBenchmark.csproj|solutionrelative:benchmarks\\graphbenchmark\\igraphstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|d:\\microservice\\construction\\linkedin\\buildingblocks\\events\\requirementevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE0C9D78-DE01-463F-88E5-9152E831029A}|BuildingBlocks\\BuildingBlocks.csproj|solutionrelative:buildingblocks\\events\\requirementevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\application\\notificationcontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\application\\notificationcontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\infrastructure\\notificationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\infrastructure\\notificationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\notificationservice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\notificationservice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\infrastructure\\kafkanotificationconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\infrastructure\\kafkanotificationconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\application\\requirementcontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\application\\requirementcontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|d:\\microservice\\construction\\linkedin\\userservice\\infrastructure\\persistence\\configuations\\skillconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|solutionrelative:userservice\\infrastructure\\persistence\\configuations\\skillconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|d:\\microservice\\construction\\linkedin\\userservice\\infrastructure\\persistence\\configuations\\professionalskillconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|solutionrelative:userservice\\infrastructure\\persistence\\configuations\\professionalskillconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|d:\\microservice\\construction\\linkedin\\userservice\\domain\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|solutionrelative:userservice\\domain\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|d:\\microservice\\construction\\linkedin\\userservice\\application\\skills\\addprofessionalskillcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|solutionrelative:userservice\\application\\skills\\addprofessionalskillcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|d:\\microservice\\construction\\linkedin\\userservice\\infrastructure\\repositories\\efuserprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|solutionrelative:userservice\\infrastructure\\repositories\\efuserprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|d:\\microservice\\construction\\linkedin\\userservice\\repositories\\iuserprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AC15F3-EC41-4C10-AE6C-6491CDD05248}|UserService\\UserService.csproj|solutionrelative:userservice\\repositories\\iuserprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|d:\\microservice\\construction\\linkedin\\requirementservice\\application\\requirementmatchingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1A6B2D4-7E89-4F01-AB23-5D6E7F8091A2}|RequirementService\\RequirementService.csproj|solutionrelative:requirementservice\\application\\requirementmatchingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|d:\\microservice\\construction\\linkedin\\notificationservice\\migrations\\20261004120305_updatenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B672BCDB-C5D3-428A-9C3C-728150ED4ACA}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\migrations\\20261004120305_updatenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,48 +170,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConnectionsController.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Controllers\\ConnectionsController.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Controllers\\ConnectionsController.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Controllers\\ConnectionsController.cs",
-              "RelativeToolTip": "ConnectionService\\Controllers\\ConnectionsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "RequirementsController.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Controllers\\RequirementsController.cs",
+              "RelativeDocumentMoniker": "RequirementService\\Controllers\\RequirementsController.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Controllers\\RequirementsController.cs",
+              "RelativeToolTip": "RequirementService\\Controllers\\RequirementsController.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAuwGgAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T07:16:51.041Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-09-18T05:31:38.509Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OutboxEnvelope.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Application\\OutboxEnvelope.cs",
+              "RelativeDocumentMoniker": "ConnectionService\\Application\\OutboxEnvelope.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Application\\OutboxEnvelope.cs",
+              "RelativeToolTip": "ConnectionService\\Application\\OutboxEnvelope.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T09:45:41.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ConnectionContracts.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\ConnectionContracts.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\ConnectionContracts.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\ConnectionContracts.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\ConnectionContracts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABBAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ConnectionRules.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Domain\\ConnectionRules.cs",
+              "RelativeDocumentMoniker": "ConnectionService\\Domain\\ConnectionRules.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Domain\\ConnectionRules.cs",
+              "RelativeToolTip": "ConnectionService\\Domain\\ConnectionRules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T07:17:27.773Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-10-20T09:07:42.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GetSentConnectionsQueryHandler.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQueryHandler.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQueryHandler.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQueryHandler.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Title": "Neo4jSchemaInitializer.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jSchemaInitializer.cs",
+              "RelativeDocumentMoniker": "ConnectionService\\Infrastructure\\Persistence\\Neo4jSchemaInitializer.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jSchemaInitializer.cs",
+              "RelativeToolTip": "ConnectionService\\Infrastructure\\Persistence\\Neo4jSchemaInitializer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T13:53:16.667Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-10-20T09:07:22.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\appsettings.json",
+              "RelativeDocumentMoniker": "ConnectionService\\appsettings.json",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\appsettings.json",
+              "RelativeToolTip": "ConnectionService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-20T09:04:06.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Neo4jOutboxPublisherService.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Outbox\\Neo4jOutboxPublisherService.cs",
+              "RelativeDocumentMoniker": "ConnectionService\\Infrastructure\\Outbox\\Neo4jOutboxPublisherService.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Outbox\\Neo4jOutboxPublisherService.cs",
+              "RelativeToolTip": "ConnectionService\\Infrastructure\\Outbox\\Neo4jOutboxPublisherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T08:24:06.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Neo4jOptions.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
+              "RelativeDocumentMoniker": "ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
+              "RelativeToolTip": "ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T09:03:36.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Neo4jConnectionRepository.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
+              "RelativeDocumentMoniker": "ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
+              "RelativeToolTip": "ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T08:25:02.913Z",
               "EditorCaption": ""
             },
             {
@@ -155,277 +281,393 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\UserService\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "UserService\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\UserService\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "UserService\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAowDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T09:23:11.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClaimsPrincipalExtensions.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
-              "RelativeDocumentMoniker": "BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
-              "RelativeToolTip": "BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T09:23:11.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateCommentCommandHandler.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\PostService\\Application\\Features\\Comments\\Commands\\CreateCommand\\CreateCommentCommandHandler.cs",
-              "RelativeDocumentMoniker": "PostService\\Application\\Features\\Comments\\Commands\\CreateCommand\\CreateCommentCommandHandler.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\PostService\\Application\\Features\\Comments\\Commands\\CreateCommand\\CreateCommentCommandHandler.cs",
-              "RelativeToolTip": "PostService\\Application\\Features\\Comments\\Commands\\CreateCommand\\CreateCommentCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T14:36:50.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Neo4jConnectionRepository.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
-              "RelativeToolTip": "ConnectionService\\Infrastructure\\Persistence\\Neo4jConnectionRepository.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAkwHoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T07:18:06.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetConnectionsQueryHandler.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQueryHandler.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQueryHandler.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQueryHandler.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:30:28.843Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "GetPostCommentQueryHandler.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\PostService\\Application\\Features\\Comments\\Queries\\GetPostCommentQueryHandler.cs",
-              "RelativeDocumentMoniker": "PostService\\Application\\Features\\Comments\\Queries\\GetPostCommentQueryHandler.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\PostService\\Application\\Features\\Comments\\Queries\\GetPostCommentQueryHandler.cs",
-              "RelativeToolTip": "PostService\\Application\\Features\\Comments\\Queries\\GetPostCommentQueryHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "NotificationEventMapper.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Application\\NotificationEventMapper.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Application\\NotificationEventMapper.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Application\\NotificationEventMapper.cs",
+              "RelativeToolTip": "NotificationService\\Application\\NotificationEventMapper.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAASwC8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T14:27:10.575Z",
+              "WhenOpened": "2026-10-10T16:54:39.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "SentRequestDto.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\DTOs\\SentRequestDto.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\DTOs\\SentRequestDto.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\DTOs\\SentRequestDto.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\DTOs\\SentRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Title": "ConnectionCommands.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Application\\Commands\\ConnectionCommands.cs",
+              "RelativeDocumentMoniker": "ConnectionService\\Application\\Commands\\ConnectionCommands.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\ConnectionService\\Application\\Commands\\ConnectionCommands.cs",
+              "RelativeToolTip": "ConnectionService\\Application\\Commands\\ConnectionCommands.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAADgv0IAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T14:08:56.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetSentConnectionsQuery.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQuery.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQuery.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQuery.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Queries\\SentConnection\\GetSentConnectionsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T13:49:51.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:53:47.98Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ConnectionDto.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\DTOs\\ConnectionDto.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\DTOs\\ConnectionDto.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\DTOs\\ConnectionDto.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\DTOs\\ConnectionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
+              "Title": "EventTopics.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Events\\EventTopics.cs",
+              "RelativeDocumentMoniker": "BuildingBlocks\\Events\\EventTopics.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Events\\EventTopics.cs",
+              "RelativeToolTip": "BuildingBlocks\\Events\\EventTopics.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:08:38.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:53:37.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConnectionEvents.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Events\\ConnectionEvents.cs",
+              "RelativeDocumentMoniker": "BuildingBlocks\\Events\\ConnectionEvents.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Events\\ConnectionEvents.cs",
+              "RelativeToolTip": "BuildingBlocks\\Events\\ConnectionEvents.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T16:53:25.55Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "RequestConnectionCommandHandler.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionCommandHandler.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionCommandHandler.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionCommandHandler.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionCommandHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Title": "ClaimsPrincipalExtensions.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
+              "RelativeDocumentMoniker": "BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
+              "RelativeToolTip": "BuildingBlocks\\Common\\ClaimsPrincipalExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:11:07.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:53:18.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JwtExtensions.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Authentication\\JwtExtensions.cs",
+              "RelativeDocumentMoniker": "BuildingBlocks\\Authentication\\JwtExtensions.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Authentication\\JwtExtensions.cs",
+              "RelativeToolTip": "BuildingBlocks\\Authentication\\JwtExtensions.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T16:53:08.066Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ConnectionRequestDto.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\DTOs\\ConnectionRequestDto.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\DTOs\\ConnectionRequestDto.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\DTOs\\ConnectionRequestDto.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\DTOs\\ConnectionRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAZAAAAAAAAAA==",
+              "Title": "EfNotificationRepository.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Infrastructure\\EfNotificationRepository.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Infrastructure\\EfNotificationRepository.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Infrastructure\\EfNotificationRepository.cs",
+              "RelativeToolTip": "NotificationService\\Infrastructure\\EfNotificationRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:34:58.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\GatewayService\\appsettings.json",
-              "RelativeDocumentMoniker": "GatewayService\\appsettings.json",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\GatewayService\\appsettings.json",
-              "RelativeToolTip": "GatewayService\\appsettings.json",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFEAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-03T09:15:55.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:52:42.632Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Program.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Program.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Program.cs",
-              "RelativeToolTip": "ConnectionService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Title": "EfRequirementRepository.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Infrastructure\\EfRequirementRepository.cs",
+              "RelativeDocumentMoniker": "RequirementService\\Infrastructure\\EfRequirementRepository.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Infrastructure\\EfRequirementRepository.cs",
+              "RelativeToolTip": "RequirementService\\Infrastructure\\EfRequirementRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T09:13:36.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:52:05.217Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "AcceptConnectionCommand.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommand.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommand.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommand.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "Requirement.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Domain\\Requirement.cs",
+              "RelativeDocumentMoniker": "RequirementService\\Domain\\Requirement.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Domain\\Requirement.cs",
+              "RelativeToolTip": "RequirementService\\Domain\\Requirement.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAwwA8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:36:26.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Neo4jOptions.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
-              "RelativeToolTip": "ConnectionService\\Infrastructure\\Persistence\\Neo4jOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:39:00.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:51:52.9Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "ValidationBehavior.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\ValidationBehavior.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\ValidationBehavior.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\ValidationBehavior.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\ValidationBehavior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAUAAAAAAAAAA==",
+              "Title": "ConnectionNetworkClient.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Infrastructure\\ConnectionNetworkClient.cs",
+              "RelativeDocumentMoniker": "RequirementService\\Infrastructure\\ConnectionNetworkClient.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Infrastructure\\ConnectionNetworkClient.cs",
+              "RelativeToolTip": "RequirementService\\Infrastructure\\ConnectionNetworkClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T07:18:40.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:51:01.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Controllers\\NotificationsController.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "NotificationService\\Controllers\\NotificationsController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:54:20.055Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "GetConnectionsQuery.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQuery.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQuery.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQuery.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Queries\\GetConnections\\GetConnectionsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "SocialGraph.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\benchmarks\\GraphBenchmark\\SocialGraph.cs",
+              "RelativeDocumentMoniker": "benchmarks\\GraphBenchmark\\SocialGraph.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\benchmarks\\GraphBenchmark\\SocialGraph.cs",
+              "RelativeToolTip": "benchmarks\\GraphBenchmark\\SocialGraph.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:33:54.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:50:39.262Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "RequestConnectionValidator.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionValidator.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionValidator.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionValidator.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Commands\\RequestConnection\\RequestConnectionValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "Neo4jStore.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\benchmarks\\GraphBenchmark\\Neo4jStore.cs",
+              "RelativeDocumentMoniker": "benchmarks\\GraphBenchmark\\Neo4jStore.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\benchmarks\\GraphBenchmark\\Neo4jStore.cs",
+              "RelativeToolTip": "benchmarks\\GraphBenchmark\\Neo4jStore.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:13:07.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:50:13.872Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "AcceptConnectionValidator.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionValidator.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionValidator.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionValidator.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Title": "IGraphStore.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\benchmarks\\GraphBenchmark\\IGraphStore.cs",
+              "RelativeDocumentMoniker": "benchmarks\\GraphBenchmark\\IGraphStore.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\benchmarks\\GraphBenchmark\\IGraphStore.cs",
+              "RelativeToolTip": "benchmarks\\GraphBenchmark\\IGraphStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:36:37.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T16:50:06.554Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "AcceptConnectionCommandHandler.cs",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommandHandler.cs",
-              "RelativeDocumentMoniker": "ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommandHandler.cs",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommandHandler.cs",
-              "RelativeToolTip": "ConnectionService\\Application\\Commands\\AcceptConnection\\AcceptConnectionCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Program.cs",
+              "RelativeDocumentMoniker": "RequirementService\\Program.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Program.cs",
+              "RelativeToolTip": "RequirementService\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAA8AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:36:29.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T05:50:32.957Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "ConnectionService",
-              "DocumentMoniker": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\ConnectionService.csproj",
-              "RelativeDocumentMoniker": "ConnectionService\\ConnectionService.csproj",
-              "ToolTip": "D:\\Microservice\\Test\\LinkedIn\\ConnectionService\\ConnectionService.csproj",
-              "RelativeToolTip": "ConnectionService\\ConnectionService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-03T08:01:25.081Z",
-              "EditorCaption": ""
+              "Title": "RequirementEvents.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Events\\RequirementEvents.cs",
+              "RelativeDocumentMoniker": "BuildingBlocks\\Events\\RequirementEvents.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\BuildingBlocks\\Events\\RequirementEvents.cs",
+              "RelativeToolTip": "BuildingBlocks\\Events\\RequirementEvents.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwCEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T05:49:16.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\appsettings.json",
+              "RelativeDocumentMoniker": "RequirementService\\appsettings.json",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\appsettings.json",
+              "RelativeToolTip": "RequirementService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-05T05:47:07.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NotificationDbContext.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Infrastructure\\NotificationDbContext.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Infrastructure\\NotificationDbContext.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Infrastructure\\NotificationDbContext.cs",
+              "RelativeToolTip": "NotificationService\\Infrastructure\\NotificationDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:54:05.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\appsettings.json",
+              "RelativeDocumentMoniker": "NotificationService\\appsettings.json",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\appsettings.json",
+              "RelativeToolTip": "NotificationService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-04T12:53:42.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "NotificationContracts.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Application\\NotificationContracts.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Application\\NotificationContracts.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Application\\NotificationContracts.cs",
+              "RelativeToolTip": "NotificationService\\Application\\NotificationContracts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:54:23.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "NotificationService.http",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\NotificationService.http",
+              "RelativeDocumentMoniker": "NotificationService\\NotificationService.http",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\NotificationService.http",
+              "RelativeToolTip": "NotificationService\\NotificationService.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-10-04T12:53:32.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Domain\\Notification.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Domain\\Notification.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Domain\\Notification.cs",
+              "RelativeToolTip": "NotificationService\\Domain\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T10:20:58.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "KafkaNotificationConsumer.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Infrastructure\\KafkaNotificationConsumer.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Infrastructure\\KafkaNotificationConsumer.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Infrastructure\\KafkaNotificationConsumer.cs",
+              "RelativeToolTip": "NotificationService\\Infrastructure\\KafkaNotificationConsumer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:31:00.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AddProfessionalSkillCommandHandler.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Application\\Skills\\AddProfessionalSkillCommandHandler.cs",
+              "RelativeDocumentMoniker": "UserService\\Application\\Skills\\AddProfessionalSkillCommandHandler.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Application\\Skills\\AddProfessionalSkillCommandHandler.cs",
+              "RelativeToolTip": "UserService\\Application\\Skills\\AddProfessionalSkillCommandHandler.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAlwB0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:15:14.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RequirementContracts.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Application\\RequirementContracts.cs",
+              "RelativeDocumentMoniker": "RequirementService\\Application\\RequirementContracts.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Application\\RequirementContracts.cs",
+              "RelativeToolTip": "RequirementService\\Application\\RequirementContracts.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAtwOMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:04:48.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProfessionalSkillConfiguration.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Infrastructure\\Persistence\\Configuations\\ProfessionalSkillConfiguration.cs",
+              "RelativeDocumentMoniker": "UserService\\Infrastructure\\Persistence\\Configuations\\ProfessionalSkillConfiguration.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Infrastructure\\Persistence\\Configuations\\ProfessionalSkillConfiguration.cs",
+              "RelativeToolTip": "UserService\\Infrastructure\\Persistence\\Configuations\\ProfessionalSkillConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:15:56.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SkillConfiguration.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Infrastructure\\Persistence\\Configuations\\SkillConfiguration.cs",
+              "RelativeDocumentMoniker": "UserService\\Infrastructure\\Persistence\\Configuations\\SkillConfiguration.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Infrastructure\\Persistence\\Configuations\\SkillConfiguration.cs",
+              "RelativeToolTip": "UserService\\Infrastructure\\Persistence\\Configuations\\SkillConfiguration.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:16:01.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EfUserProfileRepository.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Infrastructure\\Repositories\\EfUserProfileRepository.cs",
+              "RelativeDocumentMoniker": "UserService\\Infrastructure\\Repositories\\EfUserProfileRepository.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Infrastructure\\Repositories\\EfUserProfileRepository.cs",
+              "RelativeToolTip": "UserService\\Infrastructure\\Repositories\\EfUserProfileRepository.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAD4v10AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:14:59.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IUserProfileRepository.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Repositories\\IUserProfileRepository.cs",
+              "RelativeDocumentMoniker": "UserService\\Repositories\\IUserProfileRepository.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Repositories\\IUserProfileRepository.cs",
+              "RelativeToolTip": "UserService\\Repositories\\IUserProfileRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAD4vxYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:14:51.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Skill.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Domain\\Skill.cs",
+              "RelativeDocumentMoniker": "UserService\\Domain\\Skill.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\UserService\\Domain\\Skill.cs",
+              "RelativeToolTip": "UserService\\Domain\\Skill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:14:22.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20261004120305_UpdateNotification.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Migrations\\20261004120305_UpdateNotification.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Migrations\\20261004120305_UpdateNotification.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\NotificationService\\Migrations\\20261004120305_UpdateNotification.cs",
+              "RelativeToolTip": "NotificationService\\Migrations\\20261004120305_UpdateNotification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:03:05.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "RequirementMatchingService.cs",
+              "DocumentMoniker": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Application\\RequirementMatchingService.cs",
+              "RelativeDocumentMoniker": "RequirementService\\Application\\RequirementMatchingService.cs",
+              "ToolTip": "D:\\Microservice\\Construction\\LinkedIn\\RequirementService\\Application\\RequirementMatchingService.cs",
+              "RelativeToolTip": "RequirementService\\Application\\RequirementMatchingService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAADwv2kAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T10:57:10.608Z"
             }
           ]
         }
